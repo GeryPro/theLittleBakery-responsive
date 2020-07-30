@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+:root {
+  --primary-color: #ffe5ee;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: var(--primary-color);
+  background: #994c66;
+}
+
+.logo {
+  width: 300px;
+  height: 300px;
+}
+
+.landing {
+  position: relative;
+  background: url(../img/bg-image.jpg) center/cover no-repeat;
+  height: 100vh;
+  z-index: -1;
+}
+
+.landing-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(51, 25, 34, 0.6);
+  text-align: center;
+  padding-top: 50px;
+}
+
+.landing h1,
+.countdown {
+  font-size: 50px;
+  letter-spacing: 1px;
+}
+
+.landing p {
+  font-size: 20px;
+  letter-spacing: 0.5px;
+}
+
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 0.6em;
+}
+
+.countdown div {
+  padding: 20px;
+  border: 1px solid var(--primary-color);
+  border-radius: 10px;
+  margin: 5px;
+  opacity: 0.8;
+  background: #cc6588;
+}
+
+.countdown div:first-child {
+  background: #e52d6d;
+}
+
+.countdown span {
+  display: block;
+  font-size: 25px;
+}
+
+@media (max-width: 650px) {
+  .landing img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .landing h1 {
+    font-size: 40px;
+  }
+
+  .landing h1,
+  .landing p {
+    margin: 25px;
+  }
+
+  .countdown {
+    font-size: 30px;
+    flex-direction: column;
+  }
+
+  .countdown div {
+    display: none;
+  }
+
+  .countdown div:first-child {
+    display: block;
+    width: 70%;
+    padding: 10px;
+  }
+}
+
+@media (max-height: 600px) {
+  img {
+    width: 20%;
+  }
+
+  p {
+    display: none;
+  }
+}
+
+@media (max-height: 400px) {
+  img {
+    padding-bottom: 30px;
+  }
+
+  h1 {
+    display: none;
+  }
+}
